@@ -1,0 +1,79 @@
+.home {
+   background-color: rgb(4, 4, 67);
+   height: calc(var(--vh, 1vh) * 100 - 60px);
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.firstPage {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+
+   opacity: 0;
+   animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.firstPage.visible {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.title,
+.portrait {
+   font-size: 2em;
+   color: aliceblue;
+}
+
+.portrait img {
+   max-width: 400px;
+   border-radius: 200px;
+}
+
+.scroll {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: aliceblue;
+   font-size: 1.2em;
+   cursor: pointer;
+
+   opacity: 0;
+   transition: opacity 0.5s;
+}
+
+.scroll.visible {
+   opacity: 1;
+}
+
+.scroll:hover .fa-chevron-down {
+   animation: arrowAnimation 1s infinite;
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes arrowAnimation {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(10px);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}

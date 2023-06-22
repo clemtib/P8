@@ -1,0 +1,25 @@
+{
+   "cards": [
+      {
+         "title": "Web développement",
+         "icon": "fa-laptop-code",
+         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+         "subtitle": "Compétences clés",
+         "skills": ["HTML", "CSS", "JavaScript", "React", "Node.js"]
+      },
+      {
+         "title": "Intégration électronique",
+         "icon": "fa-microchip",
+         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+         "subtitle": "Compétences clés",
+         "skills": ["Arduino", "Capteurs", "Circuit design", "Prototypage"]
+      },
+      {
+         "title": "DIY",
+         "icon": "fa-tools",
+         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+         "subtitle": "Compétences clés",
+         "skills": ["Menuiserie", "Électricité", "Soudure", "Projets créatifs"]
+      }
+   ]
+}
