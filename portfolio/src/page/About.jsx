@@ -19,7 +19,7 @@ export default function Bio() {
                <div className="about-circle"></div>
             </div>
 
-            <div className="icon">Icon</div>
+            <div className="about-icon">Icon</div>
          </div>
       </section>
    );

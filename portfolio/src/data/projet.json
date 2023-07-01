@@ -1,0 +1,76 @@
+{
+   "projects": [
+      {
+         "title": "Booki",
+         "year": "2022",
+         "category": "Web",
+         "mission": "Frontend Development",
+         "techno": "HTML, CSS",
+         "webUrl": "https://example.com/project1",
+         "background": "/images/Booki_projet1.png"
+      },
+      {
+         "title": "Sophie Bluel Portfolio",
+         "year": "2023",
+         "category": "Web",
+         "mission": "Frontend Development",
+         "techno": "HTML, CSS, JavaScript",
+         "webUrl": "https://example.com/project2",
+         "background": "images/SophieBluel_projet2.png"
+      },
+      {
+         "title": "Kasa",
+         "year": "2023",
+         "category": "Web",
+         "mission": "Frontend Development",
+         "techno": "React, Node.js",
+         "webUrl": "https://example.com/project3",
+         "background": "images/Kasa_projet3.png"
+      },
+      {
+         "title": "Mon vieux grimoire",
+         "year": "2023",
+         "category": "Web",
+         "mission": "Backend Development",
+         "techno": "Node.js, Express",
+         "webUrl": "https://example.com/project3",
+         "background": "images/Grimoir_projet4.png"
+      },
+      {
+         "title": "Electronics Project 1",
+         "year": "2019",
+         "category": "Electronics",
+         "mission": "Prototyping",
+         "techno": "Arduino, Raspberry Pi",
+         "webUrl": "https://example.com/project4",
+         "background": "background-image4.jpg"
+      },
+      {
+         "title": "Electronics Project 2",
+         "year": "2018",
+         "category": "Electronics",
+         "mission": "Embedded Systems",
+         "techno": "C, Embedded C",
+         "webUrl": "https://example.com/project5",
+         "background": "background-image5.jpg"
+      },
+      {
+         "title": "DIY Project 1",
+         "year": "2017",
+         "category": "DIY",
+         "mission": "Artisanal Crafting",
+         "techno": "Wood, Metal",
+         "webUrl": "https://example.com/project6",
+         "background": "background-image6.jpg"
+      },
+      {
+         "title": "DIY Project 2",
+         "year": "2016",
+         "category": "DIY",
+         "mission": "Creative Recycling",
+         "techno": "Upcycling, Sewing",
+         "webUrl": "https://example.com/project7",
+         "background": "background-image7.jpg"
+      }
+   ]
+}

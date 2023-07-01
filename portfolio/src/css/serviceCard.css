@@ -1,0 +1,15 @@
+.card-item {
+   border: solid rgb(255, 251, 251) 2px;
+   border-radius: 20px;
+   box-shadow: 0px 0px 20px rgb(227, 222, 222);
+   margin: 50px 20px;
+   padding: 5px;
+
+   width: 300px;
+   height: 500px;
+}
+
+.card-icon {
+   text-align: center;
+   margin: 20px;
+}

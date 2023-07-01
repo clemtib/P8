@@ -47,7 +47,7 @@ export default function Home() {
             </div>
 
             <div className="portrait">
-               <img src="images/portrait.jpg" alt="" />
+               <img src="images/portrait.jpeg" alt="" />
             </div>
          </div>
          <div className={`scroll ${firstPageVisible ? "visible" : ""}`}>

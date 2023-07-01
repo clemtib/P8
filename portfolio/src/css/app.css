@@ -3,6 +3,8 @@
 @import "./home.css";
 @import "./service.css";
 @import "./about.css";
+@import "./serviceCard.css";
+@import "./activity.css";
 
 * {
    font-family: "Montserrat";
@@ -24,4 +26,10 @@ a {
 
 section {
    padding: 0 20px;
+}
+
+@media (max-width: 700px) {
+   * {
+      background-color: yellow;
+   }
 }
