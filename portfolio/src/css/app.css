@@ -1,18 +1,10 @@
-@import "./normalize.css";
-@import "./header.css";
-@import "./home.css";
-@import "./service.css";
-@import "./about.css";
-@import "./serviceCard.css";
-@import "./activity.css";
-
 * {
-   font-family: "Montserrat";
-   font-weight: 400;
+   font-family: "Raleway";
 }
 
 h3 {
    font-size: 3em;
+   color: #13134d;
 }
 p {
    font-size: 1.25em;
@@ -28,8 +20,10 @@ section {
    padding: 0 20px;
 }
 
-@media (max-width: 700px) {
-   * {
-      background-color: yellow;
-   }
-}
+@import "./normalize.css";
+@import "./header.css";
+@import "./home.css";
+@import "./service.css";
+@import "./about.css";
+@import "./serviceCard.css";
+@import "./activity.css";

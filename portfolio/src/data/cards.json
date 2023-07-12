@@ -3,21 +3,21 @@
       {
          "title": "Web développement",
          "icon": "fa-laptop-code",
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         "subtitle": "Compétences clés",
+         "description": "Développement d'application web front et back",
+         "subtitle": "Language utilisés",
          "skills": ["HTML", "CSS", "JavaScript", "React", "Node.js"]
       },
       {
          "title": "Intégration électronique",
          "icon": "fa-microchip",
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+         "description": "Création de module électonique avec micro-controleur",
          "subtitle": "Compétences clés",
-         "skills": ["Arduino", "Capteurs", "Circuit design", "Prototypage"]
+         "skills": ["Arduino", "Raspberry", "Capteur", "Prototypage"]
       },
       {
          "title": "Diy",
          "icon": "fa-tools",
-         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+         "description": "Prototypage et conception à la demande",
          "subtitle": "Compétences clés",
          "skills": ["Menuiserie", "Électricité", "Soudure", "Projets créatifs"]
       }

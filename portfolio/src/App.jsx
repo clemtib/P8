@@ -21,7 +21,6 @@ function App() {
          <About />
          <Service />
          <Activity />
-         <Service />
       </>
    );
 }

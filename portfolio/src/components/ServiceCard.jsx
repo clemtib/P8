@@ -7,14 +7,17 @@ export default function ServiceCard() {
       <>
          {serviceData.cards.map((card, index) => (
             <div key={index} className="card-item">
-               <div className="card-icon">
-                  <FontAwesomeIcon
-                     icon={card.icon}
-                     size="3x"
-                     style={{ color: "#ffffff" }}
-                  />
+               <div className="head">
+                  <div className="card-icon">
+                     <FontAwesomeIcon
+                        icon={card.icon}
+                        size="3x"
+                        style={{ color: "#13134d" }}
+                     />
+                  </div>
+                  <h4>{card.title}</h4>
                </div>
-               <h4 className="title">{card.title}</h4>
+
                <p className="description">{card.description}</p>
                <h5 className="subtitle">{card.subtitle}</h5>
                <ul className="skills">

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import projetData from "../data/projet.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Activity() {
    const categories = ["Web", "Electronics", "DIY"];
@@ -7,11 +9,17 @@ export default function Activity() {
    const [selectedProject, setSelectedProject] = useState(null);
    const [modalOpen, setModalOpen] = useState(false);
 
+   const handleCloseButtonClick = () => {
+      setSelectedProject(null);
+      setModalOpen(false);
+      document.body.classList.remove("overflow-hidden");
+   };
+
    // Fonction pour mettre à jour le filtre
-   const handleFilterChange = (category) => {
+   const handleFilterChange = (category, event) => {
       setFilter(category);
       setSelectedProject(null); // Réinitialise le projet sélectionné
-      closeModal(); // Ferme la boîte modale et rétablit le défilement de l'arrière-plan
+      closeModal(event); // Ferme la boîte modale et rétablit le défilement de l'arrière-plan
    };
 
    // Fonction pour gérer le clic sur un projet
@@ -22,10 +30,13 @@ export default function Activity() {
    };
 
    // Fonction pour fermer la boîte modale
-   const closeModal = () => {
-      setSelectedProject(null);
-      setModalOpen(false);
-      document.body.classList.remove("overflow-hidden");
+   const closeModal = (event) => {
+      // Vérifiez si l'événement provient de l'intérieur de la boîte modale
+      if (event.target.classList.contains("modal-overlay")) {
+         setSelectedProject(null);
+         setModalOpen(false);
+         document.body.classList.remove("overflow-hidden");
+      }
    };
 
    // Filtrer les projets en fonction de la catégorie sélectionnée
@@ -34,14 +45,14 @@ export default function Activity() {
    });
 
    return (
-      <section className="activity">
+      <section className="activity" id="activity">
          <h3 className="activity-title">Réalisation</h3>
          <div className="filter-buttons">
             {categories.map((category) => (
                <button
                   key={category}
                   className={filter === category ? "active" : ""}
-                  onClick={() => handleFilterChange(category)}
+                  onClick={(event) => handleFilterChange(category, event)}
                >
                   {category}
                </button>
@@ -65,19 +76,47 @@ export default function Activity() {
          {selectedProject && modalOpen && (
             <div className="modal-overlay" onClick={closeModal}>
                <div className="modal">
-                  <button className="close-button" onClick={closeModal}>
-                     &times;
+                  <button
+                     className="close-button"
+                     onClick={handleCloseButtonClick}
+                     onMouseEnter={(event) =>
+                        event.target.classList.add("beat-animation")
+                     }
+                     onMouseLeave={(event) =>
+                        event.target.classList.remove("beat-animation")
+                     }
+                  >
+                     <FontAwesomeIcon
+                        icon={faXmark}
+                        size="1x"
+                        style={{ color: "#1E3150" }}
+                     />
                   </button>
                   <div className="modal-content">
-                     <img
-                        src={selectedProject.background}
-                        alt="Project Background"
-                     />
-                     <h2>{selectedProject.title}</h2>
-                     <p>Year: {selectedProject.year}</p>
-                     <p>Mission: {selectedProject.mission}</p>
-                     <p>Techno: {selectedProject.techno}</p>
-                     <a href={selectedProject.webUrl}>Website</a>
+                     <div className="modal-pres">
+                        {" "}
+                        <img
+                           src={selectedProject.background}
+                           alt="Project Background"
+                        />
+                        <div className="modal-info">
+                           <h2>{selectedProject.title}</h2>
+                           <p>
+                              Year: <span>{selectedProject.year}</span>
+                           </p>
+                           <p>
+                              Mission: <br />
+                              <span>{selectedProject.mission}</span>
+                           </p>
+                           <p>
+                              Techno: <br />{" "}
+                              <span>{selectedProject.techno}</span>
+                           </p>
+                           <a href={selectedProject.webUrl} target="_blank">
+                              Website
+                           </a>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>

@@ -1,6 +1,6 @@
 export default function Bio() {
    return (
-      <section className="about">
+      <section className="about" id="about">
          <div className="about-container">
             <h3 className="about-title">A propos</h3>
             <div className="about-content">
